@@ -403,51 +403,6 @@ with tab3:
     ])
     st.dataframe(feature_imp_df, hide_index=True, use_container_width=True)
 
-# ==========================================
-# TAB 4: Case Study Q&A & Final Analysis
-# ==========================================
-# with tab4:
-#     st.markdown("### University Case Study: Final Analysis & Answers to Questions")
-    
-#     with st.expander("Q1: Can different cyberattacks be automatically classified?", expanded=True):
-#         st.write("""
-#         **Yes.** Machine learning models trained on network flow statistics effectively categorize network activity into discrete threat types.
-#         On the independent KDDTest+ benchmark, top models achieved **~80% accuracy** and **0.68+ Macro F1-score**, proving that automated threat identification at the perimeter is feasible without requiring manual packet payload inspection.
-#         """)
-        
-#     with st.expander("Q2: Which network features distinguish attack categories?", expanded=True):
-#         st.write("""
-#         * **Payload Bytes (`src_bytes`, `dst_bytes`)**: Differentiates high-volume data exfiltration/floods from zero-byte scans.
-#         * **Connection Errors (`serror_rate`, `flag_S0`)**: Highly predictive of TCP SYN flooding attacks.
-#         * **Service Consistency (`same_srv_rate`, `diff_srv_rate`)**: Distinguishes normal single-service usage from horizontal/vertical port sweeps.
-#         * **Authentication Failures (`num_failed_logins`, `logged_in`)**: Directly separates brute-force password guessing from authorized user sessions.
-#         """)
-        
-#     with st.expander("Q3: Which algorithm achieves the highest macro F1-score?", expanded=True):
-#         st.write("""
-#         **Logistic Regression** achieved the highest Macro F1-score (**0.6802**), followed by **K-Nearest Neighbors (0.5885)** and **Gradient Boosting (0.5508)**.
-#         When paired with SMOTE class balancing, regularized linear decision boundaries resisted overfitting on the majority classes (Normal/DoS) and maintained higher recall across rare attack types.
-#         """)
-        
-#     with st.expander("Q4: Which attacks are most frequently misclassified?", expanded=True):
-#         st.write("""
-#         * **Brute Force (R2L) and Other Attack (U2R)** are the most frequently misclassified into `Normal`.
-#           * *Reason:* Password guessing and buffer overflows occur over valid, established TCP connections (flag `SF`) with low packet counts, closely mimicking legitimate user behavior.
-#         * **Novel DoS Variants:** Slower, stealthier DoS attacks (e.g., `mailbomb`, `processtable`) that do not flood SYN packets are occasionally confused with Normal traffic.
-#         """)
-        
-#     with st.expander("Q5: Does class balancing improve performance?", expanded=True):
-#         st.write("""
-#         **Yes, significantly.** In raw network traffic, benign traffic and DoS constitute >85% of records, while U2R (`Other Attack`) accounts for less than 0.3%.
-#         Without class balancing, classifiers achieve artificially high accuracy (~72%) by predicting only majority classes, yielding a near-zero recall for minority attacks.
-#         Applying **SMOTE** re-balances class priors during training, boosting Macro Recall and Macro F1 dramatically.
-#         """)
-        
-#     with st.expander("Q6: Can the model classify a new attack observation?", expanded=True):
-#         st.write("""
-#         **Yes, with moderate generalization.** When tested against the **18 novel attack types** present only in `KDDTest+`, the model correctly mapped the majority of unseen variants into their corresponding parent threat categories (e.g., classifying unseen `apache2` as `DoS` or `saint` as `Probe`), demonstrating strong conceptual learning over pure signature memorization.
-#         """)
-
 # Footer
 st.divider()
 st.caption("Cyberattack Classification Using Machine Learning | Built with Streamlit, Scikit-Learn & NSL-KDD")
