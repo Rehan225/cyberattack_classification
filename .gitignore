@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Large Datasets not used in main pipeline
+UNSW_NB15/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# macOS System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Cache Directories
+.matplotlib_cache/
+.jupyter_runtime/
+.ipython/
+.ipynb_checkpoints/
+
+# Streamlit Local Credentials
+.streamlit/credentials.toml
