@@ -4,7 +4,7 @@ An end-to-end Machine Learning case study and comparative benchmark system for m
 
 ---
 
-## 📌 Project Overview & Objectives
+## Project Overview & Objectives
 
 Organizations face diverse network attacks ranging from high-volume Denial-of-Service (DoS) floods to stealthy port scanning, brute-force credential stuffing, and unauthorized privilege escalation. This project automates the identification and classification of network events into 5 primary operational categories:
 
@@ -28,13 +28,13 @@ Six fundamental machine learning algorithms were trained and compared under iden
 
 ---
 
-## 📊 Comparative Performance Results (KDDTest+ Benchmark)
+## Comparative Performance Results (KDDTest+ Benchmark)
 
 All models were evaluated on the independent official test set (**KDDTest+**, 22,544 samples) containing **18 novel zero-day attack types** that never appeared in the training set:
 
 | Algorithm | Accuracy | Macro Precision | Macro Recall | Macro F1-score | Train Time | Inference Time |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Logistic Regression (Deployed)** 🏆 | **0.7970** | **0.7564** | **0.6591** | **0.6802** | 4.54s | 0.002s |
+| **Logistic Regression (Deployed)** | **0.7970** | **0.7564** | **0.6591** | **0.6802** | 4.54s | 0.002s |
 | **K-Nearest Neighbors (KNN)** | 0.7552 | 0.7864 | 0.5749 | 0.5885 | 0.004s | 1.491s |
 | **Gradient Boosting** | 0.7783 | 0.7200 | 0.5363 | 0.5508 | 64.52s | 0.064s |
 | **Random Forest** | 0.7469 | 0.7937 | 0.4854 | 0.4987 | 0.46s | 0.014s |
@@ -48,7 +48,7 @@ All models were evaluated on the independent official test set (**KDDTest+**, 22
 
 ---
 
-## 🗂️ Project Directory Structure
+## Project Directory Structure
 
 ```text
 ├── cyberattack_classification.ipynb  # End-to-end Jupyter Notebook with all outputs & plots
@@ -66,7 +66,7 @@ All models were evaluated on the independent official test set (**KDDTest+**, 22
 
 ---
 
-## 🚀 Quickstart & Installation
+## Quickstart & Installation
 
 ### 1. Clone the Repository
 ```bash
