@@ -1,4 +1,4 @@
-# 🛡️ Cyberattack Classification Using Machine Learning
+# Cyberattack Classification Using Machine Learning
 
 An end-to-end Machine Learning case study and comparative benchmark system for multi-class cyber threat detection on network traffic telemetry, featuring model training, class balancing, zero-day generalization analysis, and an interactive Streamlit deployment application.
 
@@ -16,7 +16,7 @@ Organizations face diverse network attacks ranging from high-volume Denial-of-Se
 
 ---
 
-## 🔬 Machine Learning Algorithms Evaluated
+## Machine Learning Algorithms Evaluated
 
 Six fundamental machine learning algorithms were trained and compared under identical conditions:
 1. **Logistic Regression** (Multi-class with balanced class priors)
